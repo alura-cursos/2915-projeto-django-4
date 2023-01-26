@@ -3,7 +3,7 @@
 {% block content %}
 
             <section class="galeria" style="margin-left: 5em">
-                <form action="{% url 'login' %}" method="POST">
+                <form action="{% url 'nova_imagem' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="row">
                         {% for field in form.visible_fields %}
@@ -14,7 +14,7 @@
                         {% endfor %}
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success col-12" style="padding: top 5px;">Logar</button>
+                        <button type="submit" class="btn btn-success col-12" style="padding: top 5px;">Cadastrar Nova Fotografia</button>
                     </div>
                 </form>
             </section>
